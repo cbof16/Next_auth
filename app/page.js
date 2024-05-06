@@ -1,6 +1,8 @@
 
 import Head from 'next/head';
-import SignupScreen from './Component/SignupScreen';
+import Link from 'next/link';
+import Index from './index';
+import Dashboard from './dashboard/page';
 
 export default function Home() {
   return (
@@ -12,8 +14,9 @@ export default function Home() {
       </Head>
 
       <main>
-        <SignupScreen />
-      </main>
+        {/* Render the Index component content directly */}
+        <Index />
+      </main> 
     </div>
   );
 }
