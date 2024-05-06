@@ -77,8 +77,8 @@ function Index() {
       </div>
 
       {/* Right section with signup form */}
-      <div className="md:w-1/2 flex items-center justify-center md:pl-8 mt-8 md:mt-0">
-        <div className="bg-gray-800 p-8 rounded-lg shadow-md w-full md:w-96">
+      <div className="md:w-1/2 flex items-center justify-center md: mt-10 md:mt-0 sm:w-1/2">
+        <div className="bg-gray-800 p-8 rounded-lg shadow-md w-full md:w-96 sm:max-w-sm"> {/* Added sm:max-w-sm */}
           <h2 className="text-3xl font-bold text-white mb-4 text-center">Sign Up</h2>
           {emailError && (
             <p className="text-red-600 mb-2">{emailError}</p>
@@ -88,10 +88,10 @@ function Index() {
           )}
           {!showEmailInputs && (
             <button
-              className="bg-blue-500 text-white w-full px-4 py-2 rounded-lg mb-4"
+              className="bg-gray-600 text-white w-full px-4 py-2 rounded-lg mb-4"
               onClick={handleEmailSignup}
             >
-              Sign Up with Email
+              ✉️ Sign Up with Email
             </button>
           )}
           {showEmailInputs && (
@@ -119,10 +119,10 @@ function Index() {
             </>
           )}
           <button
-            className="bg-red-600 text-white w-full px-4 py-2 rounded-lg mb-2"
+            className="bg-gray-600 text-white w-full px-4 py-2 rounded-lg mb-2"
             onClick={handleGoogleSignup}
           >
-            Sign Up with Google
+             🇬 Sign Up with Google
           </button>
           <p className="text-gray-300 text-center">
             Already signed up?{' '}
