@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import { useRouter } from 'next/navigation';
 import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
-import { uath } from "./firebase/config"; 
+import { auth } from "./firebase/config"; 
 
 function Index() {
   const router = useRouter();
@@ -18,7 +18,7 @@ function Index() {
   };
 
   const handleGoogleSignup = () => {
-    const auth = getAuth(uath);
+    const auth = getAuth(auth);
     const provider = new GoogleAuthProvider();
     signInWithPopup(auth, provider)
       .then((result) => {
